@@ -1,0 +1,31 @@
+{
+  "name": "travis-deploy-ssh",
+  "version": "0.0.1",
+  "description": "auto deploy from travis-ci.org with a batch file to remote ssh host  ",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lalalic/travis-deploy-ssh.git"
+  },
+  "keywords": [
+    "travis",
+    "deploy",
+    "ssh",
+    "script"
+  ],
+  "author": "lalalic@139.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lalalic/travis-deploy-ssh/issues"
+  },
+  "homepage": "https://github.com/lalalic/travis-deploy-ssh#readme",
+  "dependencies": {
+    "ssh-exec": "^2.0.0"
+  },
+  "bin":{
+    "travis-deploy":"./helper.js"  
+  }
+}
