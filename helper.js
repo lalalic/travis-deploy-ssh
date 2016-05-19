@@ -1,11 +1,9 @@
 #!/usr/bin/env node
 
 var fs=require("fs")
-var root=`.`
 
-console.log(root)
 ;(function makeTravisDeploy(){
-    fs.appendFileSync(`${root}/.travis.yml`,
+    fs.appendFileSync(`.travis.yml`,
 `
 
 #created by travis-deploy-ssh
@@ -26,9 +24,8 @@ deploy:
 
 
 (function createSampleDeployScript(){
-    fs.appendFileSync(`${root}/.travis.deploy.sh`,
-`#!/bin/bash
-
+    fs.appendFileSync(`.travis.deploy.sh`,
+`
 #built-in env variables for connection to remote host with ssh, you have to set value in .travis.yml, or travis-ci.org
 #DEPLOY_HOST, DEPLOY_USER, DEPLOY_PASSWORD, TARGET_DEPLOY_FILE[optional, default [DEPLOY_USER's home/__deploy.sh]]
 

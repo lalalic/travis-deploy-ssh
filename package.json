@@ -1,6 +1,6 @@
 {
   "name": "travis-deploy-ssh",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "auto deploy from travis-ci.org with a batch file to remote ssh host  ",
   "main": "index.js",
   "scripts": {
@@ -26,6 +26,7 @@
     "ssh-exec": "^2.0.0"
   },
   "bin":{
-    "travis-deploy":"./helper.js"  
-  }
+    "travis-deploy":"./helper.js"
+  },
+  "readme":"readme.md"
 }
