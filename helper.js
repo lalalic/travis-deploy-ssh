@@ -8,10 +8,10 @@ var fs=require("fs")
 
 #created by travis-deploy-ssh
 
-env:
- - DEPLOY_HOST=
- - DEPLOY_USER=
- - DEPLOY_PASSWORD=
+#env:
+# - DEPLOY_HOST=
+# - DEPLOY_USER=
+# - DEPLOY_PASSWORD=
 # - DEPLOY_TARGET_FILE=
 before_deploy:
  - chmod u+x node_modules/travis-deploy-ssh/deploy.sh

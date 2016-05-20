@@ -12,12 +12,7 @@ var exec = require('ssh-exec'),
 
 console.log("target: "+target)
 
-function decode(a){
-	if(a && a[0]=="'")
-		return a.sustring(1,a.length-2)
-	return a
-}
-var cmds=fs.readFileSync(`.travis.deploy.sh`,{encoding:"utf8"}).replace(/\${(.*?)}/gm,(a,key)=>decode(env[key])||"")
+var cmds=fs.readFileSync(`.travis.deploy.sh`,{encoding:"utf8"}).replace(/\${(.*?)}/gm,(a,key)=>env[key]||"")
 
 exec(`echo "${cmds}" > ${target}`,opt, error=>{
 	if(error) return printerror(error);

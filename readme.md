@@ -6,7 +6,7 @@ It helps travis-ci.org pass .travis.deploy.sh to DEPLOY_HOST with account DEPLOY
 npm install travis-deploy-ssh
 ```
 
-run ```travis-deploy``` on the target project, and it would help create .travis.deploy.sh and change .travis.yml to make it ready for deploy from travis-ci.org.
+run ```travis_deploy``` on the target project, and it would help create .travis.deploy.sh and change .travis.yml to make it ready for deploy from travis-ci.org.
 
 then check ```.travis.yml``` to set following env variables, or set it on travis-ci.org for senstive data.
 * DEPLOY_USER
