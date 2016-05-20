@@ -25,7 +25,7 @@ exec(`echo "${cmds}" > ${target}`,opt, error=>{
 	exec(`chmod u+x ${target}`,opt, error=>{
 		if(error) return printerror(error);
 		console.log(`made ${target} executable on ${env.DEPLOY_HOST}`)
-		exec(`${target} > ${Date.now()}.log`,opt, error=>{
+		exec(`${target} 2>&1`,opt, error=>{
 			if(error) return printerror(error);
 			console.log(`deployed on ${env.DEPLOY_HOST}`)
 		}).pipe(process.stdout)
